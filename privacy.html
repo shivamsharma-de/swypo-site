@@ -10,41 +10,49 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script src="i18n.js" defer></script>
 </head>
-<body>
+<body data-page="privacy">
 <header class="nav wrap">
-  <a class="wordmark" href="index.html">swypo<span>.</span></a>
-  <nav><a href="index.html#support">Support</a></nav>
+  <a class="wordmark" href="index.html" aria-label="swypo">swypo<span>.</span></a>
+  <nav>
+    <a href="index.html#support" class="nav-support">Support</a>
+    <div class="lang" role="group" aria-label="Sprache · Language">
+      <button type="button" data-lang="de" aria-pressed="true">DE</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </nav>
 </header>
 
 <main class="wrap legal">
-  <p class="eyebrow">Datenschutz · Privacy</p>
-  <h1>Datenschutz&shy;erklärung</h1>
+  <p class="eyebrow" data-i18n="p.eyebrow">Datenschutz</p>
+  <h1 data-i18n="p.title">Datenschutz&shy;erklärung</h1>
 
-  <!-- ENTWURF: Vor dem Livegang die Angaben in [eckigen Klammern] ausfüllen und die Abschnitte an das tatsächliche Verhalten der App anpassen. -->
+  <!-- ENTWURF / DRAFT: Vor dem Livegang die Angaben in [eckigen Klammern] ausfüllen (in i18n.js auch die englische Fassung). -->
 
-  <h2>Verantwortlich</h2>
-  <p>[Name / Einfach Lernen]<br>[Anschrift]<br>E-Mail: <a href="mailto:support@swypo.app">support@swypo.app</a></p>
+  <h2 data-i18n="p.h.controller">Verantwortlich</h2>
+  <p><span data-i18n="p.controller">[Name / Einfach Lernen]<br>[Anschrift]</span><br>E-Mail: <a href="mailto:support@swypo.app">support@swypo.app</a></p>
 
-  <h2>Diese Website</h2>
-  <p>swypo.app ist eine statische Informationsseite. Wir setzen keine Cookies und keine Analyse-Tools ein. Beim Aufruf verarbeitet unser Hosting-Anbieter [Anbieter] technisch notwendige Server-Logdaten (z. B. IP-Adresse, Zeitpunkt, aufgerufene Seite). Schriften werden von Google Fonts geladen; dabei wird deine IP-Adresse an Google übertragen.</p>
+  <h2 data-i18n="p.h.site">Diese Website</h2>
+  <p data-i18n="p.site">swypo.app ist eine statische Informationsseite. Wir setzen keine Cookies und keine Analyse-Tools ein. Deine Sprachwahl (DE/EN) wird nur lokal in deinem Browser gespeichert. Beim Aufruf verarbeitet unser Hosting-Anbieter GitHub Pages technisch notwendige Server-Logdaten (z. B. IP-Adresse, Zeitpunkt, aufgerufene Seite). Schriften werden von Google Fonts geladen; dabei wird deine IP-Adresse an Google übertragen.</p>
 
-  <h2>Die App</h2>
-  <p>[Beschreibe hier, welche Daten die App verarbeitet: z. B. ob Lernfortschritt nur lokal auf dem Gerät gespeichert wird, ob ein Konto nötig ist und ob Fotos aus dem Seiten-Scan das Gerät verlassen.]</p>
+  <h2 data-i18n="p.h.app">Die App</h2>
+  <p data-i18n="p.app">[Beschreibe hier, welche Daten die App verarbeitet: z. B. ob Lernfortschritt nur lokal auf dem Gerät gespeichert wird, ob ein Konto nötig ist und ob Fotos aus dem Seiten-Scan das Gerät verlassen.]</p>
 
-  <h2>Kamera</h2>
-  <p>Der Seiten-Scan nutzt die Kamera nur, wenn du ihn startest. [Fotos werden nur auf dem Gerät verarbeitet / werden zur Texterkennung an … übertragen.]</p>
+  <h2 data-i18n="p.h.camera">Kamera</h2>
+  <p data-i18n="p.camera">Der Seiten-Scan nutzt die Kamera nur, wenn du ihn startest. [Fotos werden nur auf dem Gerät verarbeitet / werden zur Texterkennung an … übertragen.]</p>
 
-  <h2>Deine Rechte</h2>
-  <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch sowie auf Beschwerde bei einer Datenschutz-Aufsichtsbehörde. Schreib uns dazu an <a href="mailto:support@swypo.app">support@swypo.app</a>.</p>
+  <h2 data-i18n="p.h.rights">Deine Rechte</h2>
+  <p><span data-i18n="p.rights">Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch sowie auf Beschwerde bei einer Datenschutz-Aufsichtsbehörde. Schreib uns dazu an</span> <a href="mailto:support@swypo.app">support@swypo.app</a>.</p>
 
-  <p class="en" style="margin-top:40px">English: swypo.app is a static information site without cookies or analytics. For questions about your data, contact support@swypo.app.</p>
-  <p class="mono small" style="margin-top:24px;color:var(--muted)">Stand: [Datum]</p>
+  <p class="mono small" style="margin-top:32px;color:var(--muted)" data-i18n="p.date">Stand: [Datum]</p>
 </main>
 
 <footer class="wrap foot">
-  <div class="foot-brand"><img src="favicon.svg" alt="" width="28" height="28"><span>swypo<span class="v">.</span> · ein Projekt von Einfach Lernen</span></div>
-  <nav><a href="index.html">Start</a><a href="mailto:support@swypo.app">Kontakt</a></nav>
+  <div class="foot-brand"><img src="favicon.svg" alt="" width="28" height="28"><span>swypo<span class="v">.</span> · <span data-i18n="foot.by">ein Projekt von Einfach Lernen</span></span></div>
+  <nav><a href="index.html" data-i18n="foot.home">Start</a><a href="mailto:support@swypo.app" data-i18n="foot.contact">Kontakt</a></nav>
 </footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 </body>
 </html>

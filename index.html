@@ -16,15 +16,20 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script src="i18n.js" defer></script>
 </head>
-<body>
+<body data-page="home">
 
 <header class="nav wrap">
-  <a class="wordmark" href="#top" aria-label="swypo Startseite">swypo<span>.</span></a>
+  <a class="wordmark" href="#top" aria-label="swypo">swypo<span>.</span></a>
   <nav>
-    <a href="#funktionen">Funktionen</a>
-    <a href="#themen">Themen</a>
-    <a href="#support">Support</a>
+    <a href="#funktionen" data-i18n="nav.features">Funktionen</a>
+    <a href="#themen" data-i18n="nav.themes">Themen</a>
+    <a href="#support" class="nav-support">Support</a>
+    <div class="lang" role="group" aria-label="Sprache · Language">
+      <button type="button" data-lang="de" aria-pressed="true">DE</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
   </nav>
 </header>
 
@@ -32,13 +37,12 @@
 
   <section class="hero wrap">
     <div class="hero-copy">
-      <p class="eyebrow">Ein Projekt von Einfach Lernen · A1 – C2</p>
-      <h1>Deutsch lernen,<br><em>Wort für Wort.</em></h1>
-      <p class="lede">swypo ist dein Wortschatz für Goethe und telc: ein Wörterbuch, ein Scan für deine Lehrbuchseite und ein Deck, das dich im richtigen Moment wiederholen lässt.</p>
-      <p class="lede en">German vocabulary from A1 to C2, built around the exam themes. Dictionary, page scan and a spaced-repetition deck in one calm app.</p>
+      <p class="eyebrow" data-i18n="hero.eyebrow">Ein Projekt von Einfach Lernen · A1 – C2</p>
+      <h1 data-i18n="hero.title">Deutsch lernen,<br><em>Wort für Wort.</em></h1>
+      <p class="lede" data-i18n="hero.lede">swypo ist dein Wortschatz für Goethe und telc: ein Wörterbuch, ein Scan für deine Lehrbuchseite und ein Deck, das dich im richtigen Moment wiederholen lässt.</p>
       <div class="cta">
-        <span class="btn btn-primary" aria-disabled="true">Bald im App Store · Coming soon</span>
-        <a class="btn btn-ghost" href="#support">Kontakt · Contact</a>
+        <span class="btn btn-primary" aria-disabled="true" data-i18n="hero.soon">Bald im App Store</span>
+        <a class="btn btn-ghost" href="#support" data-i18n="hero.contact">Kontakt</a>
       </div>
     </div>
 
@@ -67,50 +71,50 @@
   </section>
 
   <section id="funktionen" class="wrap section">
-    <p class="eyebrow rule">Funktionen · Features</p>
+    <p class="eyebrow rule" data-i18n="features.eyebrow">Funktionen</p>
     <ul class="features">
       <li>
         <span class="num mono">01</span>
-        <div><h3>Wörterbuch</h3><p>Jedes Wort mit Artikel, Plural, Rektion und einem Beispielsatz.</p><p class="en">A dictionary set like a dictionary: article, plural, case and an example.</p></div>
+        <div><h3 data-i18n="f1.title">Wörterbuch</h3><p data-i18n="f1.text">Jedes Wort mit Artikel, Plural, Rektion und einem Beispielsatz.</p></div>
       </li>
       <li>
         <span class="num mono">02</span>
-        <div><h3>Seiten-Scan</h3><p>Fotografiere eine Lehrbuchseite, swypo findet die Wörter und sortiert sie nach Nomen, Verben und Adjektiven.</p><p class="en">Scan a textbook page and import its words in one tap.</p></div>
+        <div><h3 data-i18n="f2.title">Seiten-Scan</h3><p data-i18n="f2.text">Fotografiere eine Lehrbuchseite, swypo findet die Wörter und sortiert sie nach Nomen, Verben und Adjektiven.</p></div>
       </li>
       <li>
         <span class="num mono">03</span>
-        <div><h3>Dein Deck</h3><p>Wiederholung im richtigen Abstand: Nochmal, Schwer, Gut oder Leicht, und swypo plant den Rest.</p><p class="en">Spaced repetition that schedules each card for you.</p></div>
+        <div><h3 data-i18n="f3.title">Dein Deck</h3><p data-i18n="f3.text">Wiederholung im richtigen Abstand: Nochmal, Schwer, Gut oder Leicht, und swypo plant den Rest.</p></div>
       </li>
       <li>
         <span class="num mono">04</span>
-        <div><h3>Serie und XP</h3><p>Ein Tagesziel von 15 Minuten, eine Serie, die du halten willst, und Fortschritt pro Niveau.</p><p class="en">A daily goal, a streak and progress per CEFR level.</p></div>
+        <div><h3 data-i18n="f4.title">Serie und XP</h3><p data-i18n="f4.text">Ein Tagesziel von 15 Minuten, eine Serie, die du halten willst, und Fortschritt pro Niveau.</p></div>
       </li>
     </ul>
   </section>
 
   <section id="themen" class="wrap section">
-    <p class="eyebrow rule">Prüfungsthemen · Exam themes</p>
-    <p class="section-lede">22 Themen aus Goethe, telc und den Klett-Kapiteln, von Familie bis Wissenschaft.</p>
+    <p class="eyebrow rule" data-i18n="themes.eyebrow">Prüfungsthemen</p>
+    <p class="section-lede" data-i18n="themes.lede">22 Themen aus Goethe, telc und den Klett-Kapiteln, von Familie bis Wissenschaft.</p>
     <div class="tiles">
       <figure class="tile" style="--h:145">
         <div class="cover"><svg viewBox="0 0 24 24"><path d="M5 19C5 10 10 5 20 4c0 9-5 15-13 15z"/><path d="M5 19l8-8"/></svg></div>
-        <figcaption>Umwelt und Klima<small>Environment</small></figcaption>
+        <figcaption data-i18n="t1">Umwelt und Klima<small>Environment and climate</small></figcaption>
       </figure>
       <figure class="tile" style="--h:25">
         <div class="cover"><svg viewBox="0 0 24 24"><path d="M12 20s-8-4.6-8-10.5A4.5 4.5 0 0 1 12 6.6a4.5 4.5 0 0 1 8 2.9C20 15.4 12 20 12 20z"/><path d="M7.5 12H10l1.3-2.3 2 4 1.2-1.7h2"/></svg></div>
-        <figcaption>Gesundheit<small>Health</small></figcaption>
+        <figcaption data-i18n="t2">Gesundheit<small>Health</small></figcaption>
       </figure>
       <figure class="tile" style="--h:250">
         <div class="cover"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 13h18"/></svg></div>
-        <figcaption>Arbeit und Beruf<small>Work</small></figcaption>
+        <figcaption data-i18n="t3">Arbeit und Beruf<small>Work and careers</small></figcaption>
       </figure>
       <figure class="tile" style="--h:75">
         <div class="cover"><svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="14" rx="3"/><path d="M6 10h12"/><path d="M8.5 21l2-4M15.5 21l-2-4"/><circle cx="9" cy="13.5" r=".6"/><circle cx="15" cy="13.5" r=".6"/></svg></div>
-        <figcaption>Reisen und Verkehr<small>Travel</small></figcaption>
+        <figcaption data-i18n="t4">Reisen und Verkehr<small>Travel and transport</small></figcaption>
       </figure>
     </div>
 
-    <div class="levels" aria-hidden="true"><p class="eyebrow">Dein Wortschatz nach Niveau</p>
+    <div class="levels" aria-hidden="true"><p class="eyebrow" data-i18n="levels.eyebrow">Dein Wortschatz nach Niveau</p>
       <div class="lv"><span class="mono">A1</span><i style="--w:100%;--c:#4CAF50"></i></div>
       <div class="lv"><span class="mono">A2</span><i style="--w:96%;--c:#8BC34A"></i></div>
       <div class="lv"><span class="mono">B1</span><i style="--w:80%;--c:#FFB300"></i></div>
@@ -123,10 +127,9 @@
   <section id="support" class="wrap section">
     <div class="support">
       <div>
-        <p class="eyebrow">Support · Hilfe</p>
-        <h2>Fragen, Fehler, Wünsche?</h2>
-        <p>Schreib uns, auf Deutsch oder Englisch.</p>
-        <p class="en">Questions, bugs or ideas? Write to us in German or English.</p>
+        <p class="eyebrow" data-i18n="support.eyebrow">Support · Hilfe</p>
+        <h2 data-i18n="support.title">Fragen, Fehler, Wünsche?</h2>
+        <p data-i18n="support.text">Schreib uns, auf Deutsch oder Englisch.</p>
       </div>
       <a class="btn btn-light mail" href="mailto:support@swypo.app">support@swypo.app</a>
     </div>
@@ -135,13 +138,15 @@
 </main>
 
 <footer class="wrap foot">
-  <div class="foot-brand"><img src="favicon.svg" alt="" width="28" height="28"><span>swypo<span class="v">.</span> · ein Projekt von Einfach Lernen</span></div>
+  <div class="foot-brand"><img src="favicon.svg" alt="" width="28" height="28"><span>swypo<span class="v">.</span> · <span data-i18n="foot.by">ein Projekt von Einfach Lernen</span></span></div>
   <nav>
-    <a href="privacy.html">Datenschutz · Privacy</a>
-    <a href="mailto:support@swypo.app">Kontakt</a>
+    <a href="privacy.html" data-i18n="foot.privacy">Datenschutz</a>
+    <a href="mailto:support@swypo.app" data-i18n="foot.contact">Kontakt</a>
   </nav>
   <p class="mono small">© 2026 Einfach Lernen</p>
 </footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
 </body>
 </html>
