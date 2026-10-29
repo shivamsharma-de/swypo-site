@@ -10,6 +10,8 @@
     'foot.privacy': 'Privacy',
     'foot.contact': 'Contact',
     'foot.home': 'Home',
+    'foot.appprivacy': 'App privacy',
+    'p.applink': 'App privacy policy: the swypo iOS app',
 
     // home
     'hero.eyebrow': 'A project by Einfach Lernen · A1 – C2',
@@ -61,10 +63,17 @@
     privacy: {
       de: { title: 'Datenschutz · swypo.' },
       en: { title: 'Privacy · swypo.' }
+    },
+    'app-privacy': {
+      de: { title: 'Datenschutzerklärung der App · swypo.' },
+      en: { title: 'App privacy policy · swypo.' }
     }
   };
 
   var TOAST_EN = '<strong>Hey, you’ll get there sooner than you think.</strong> Don’t worry, swypo will help you reach your goal.';
+
+  // Lets CSS show one language at a time; without JS both stay visible.
+  document.documentElement.classList.add('i18n');
 
   var KEY = 'swypo-lang';
   var nodes = Array.prototype.slice.call(document.querySelectorAll('[data-i18n]'));
