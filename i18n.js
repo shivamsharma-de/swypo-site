@@ -6,7 +6,7 @@
     // shared
     'nav.features': 'Features',
     'nav.themes': 'Themes',
-    'foot.by': 'a project by Einfach Lernen',
+    'foot.by': 'a hobby project by Shivam Sharma',
     'foot.privacy': 'Privacy',
     'foot.contact': 'Contact',
     'foot.home': 'Home',
@@ -14,7 +14,7 @@
     'p.applink': 'App privacy policy: the swypo iOS app',
 
     // home
-    'hero.eyebrow': 'A project by Einfach Lernen · A1 – C2',
+    'hero.eyebrow': 'German from A1 to C2',
     'hero.title': 'Learn German,<br><em>word by word.</em>',
     'hero.lede': 'swypo is your vocabulary for the Goethe and telc exams: a dictionary, a scanner for your textbook page and a deck that brings each word back at the right moment.',
     'hero.soon': 'Coming soon to the App Store',
@@ -43,16 +43,13 @@
     'p.eyebrow': 'Privacy',
     'p.title': 'Privacy policy',
     'p.h.controller': 'Responsible',
-    'p.controller': '[Name / Einfach Lernen]<br>[Address]',
     'p.h.site': 'This website',
     'p.site': 'swypo.app is a static information site. We use no cookies and no analytics. Your language choice (DE/EN) is stored only in your own browser. When you visit, our host GitHub Pages processes technically necessary server logs (for example IP address, time and page requested). Fonts are loaded from Google Fonts, which sends your IP address to Google.',
     'p.h.app': 'The app',
-    'p.app': '[Describe what data the app processes: for example whether learning progress stays on the device, whether an account is needed and whether photos from the page scan leave the device.]',
-    'p.h.camera': 'Camera',
-    'p.camera': 'The page scan uses the camera only when you start it. [Photos are processed on the device only / are sent to … for text recognition.]',
+    'p.app': 'What data the swypo iOS app processes, such as your account, study progress, scans and analytics, is set out in its own policy:',
     'p.h.rights': 'Your rights',
     'p.rights': 'You have the right to access, correct, delete, restrict and port your data, to object to its processing and to complain to a data protection authority. To do so, write to',
-    'p.date': 'Last updated: [date]'
+    'p.date': 'Last updated: 30.10.2026'
   };
 
   var META = {
